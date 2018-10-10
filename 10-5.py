@@ -61,4 +61,4 @@ for i in range(n):
     plg = Polygon(lst=list(input().split())[1:])
     if plg.square() >= ans[0]:
         ans = [plg.square(), i + 1]
-print(ans[0])
+print(ans[1])
