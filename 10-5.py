@@ -51,7 +51,7 @@ class Polygon:
 
         s = 0
         for i in range(1, self.n - 1):
-            s += s3(self.points[0], self.points[1], self.points[i + 1])
+            s += s3(self.points[0], self.points[i], self.points[i + 1])
         return s
 
 
