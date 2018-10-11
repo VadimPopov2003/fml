@@ -58,7 +58,8 @@ class Polygon:
 n = int(input())
 ans = [0, -1]
 for i in range(n):
-    plg = Polygon(lst=list(input().split())[1:])
+    tmp = list(map(int, input().split()))
+    plg = Polygon().fromCoords(tmp)
     if plg.square() >= ans[0]:
         ans = [plg.square(), i + 1]
 print(ans[1])
