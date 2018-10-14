@@ -53,3 +53,10 @@ class Polygon:
         for i in range(1, self.n - 1):
             s += s3(self.points[0], self.points[i], self.points[i + 1])
         return s
+    
+    def equil(self):
+        s = self.points[0].distance(self.points[-1])
+        for i in range(len(self.points) - 1):
+            if self.points[i].distance(self.points[i + 1]) != s:
+                return False
+        return True
